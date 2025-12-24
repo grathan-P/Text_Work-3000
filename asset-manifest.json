@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Text_Work-3000/static/css/main.a6d8c465.css",
+    "main.js": "/Text_Work-3000/static/js/main.7a73ed95.js",
+    "static/js/453.fd2f0c4a.chunk.js": "/Text_Work-3000/static/js/453.fd2f0c4a.chunk.js",
+    "index.html": "/Text_Work-3000/index.html",
+    "main.a6d8c465.css.map": "/Text_Work-3000/static/css/main.a6d8c465.css.map",
+    "main.7a73ed95.js.map": "/Text_Work-3000/static/js/main.7a73ed95.js.map",
+    "453.fd2f0c4a.chunk.js.map": "/Text_Work-3000/static/js/453.fd2f0c4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6d8c465.css",
+    "static/js/main.7a73ed95.js"
+  ]
+}
