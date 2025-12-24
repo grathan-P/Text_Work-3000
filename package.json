@@ -1,6 +1,5 @@
 {
-    "homepage": "https://grathan-P.github.io/Text_Work-3000",
-    "name": "my-app",
+    "name": "Text_Work-3000",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
