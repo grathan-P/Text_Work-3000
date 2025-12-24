@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 
 export default function Textform(props) {
+    const [text, setText] = useState("");
 
     const handleUpClick = ()=>{
       if(text === text.toUpperCase()){
@@ -38,9 +39,9 @@ export default function Textform(props) {
         props.showAlert("Nothing to copy, text is empty!", "warning");
         return;
       }
-      let text = document.getElementById("myBox");
-      text.select();
-      navigator.clipboard.writeText(text.value);
+      let textElement = document.getElementById("myBox");
+      textElement.select();
+      navigator.clipboard.writeText(textElement.value);
       props.showAlert("Copied to Clipboard!", "success");
     }
 
@@ -57,8 +58,6 @@ export default function Textform(props) {
         // console.log("ONChange");
         setText(event.target.value);
     }
-    const [text, setText] = useState("");
-    // setText("new text");
 
   return (
     <>
@@ -68,18 +67,18 @@ export default function Textform(props) {
   <label htmlFor="myBox" className="form-label" >write something</label>
   <textarea className="form-control" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==="light" ? "white" : "grey", color: props.mode==="light" ? "black" : "white"}} id="myBox" rows="5"></textarea>
   </div>
-  <button className="btn btn-primary mx-3" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleUpClick}>Convert to Uppercase</button>
-  <button className="btn btn-primary mx-3" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleLowClick}>Convert to lowercase</button>
-  <button className="btn btn-primary mx-3" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleClearClick}>Clear Text</button>
-  <button className="btn btn-primary mx-3" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleCopyClick}>Copy Text</button>
-  <button className="btn btn-primary mx-3" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleExtraSpaces}>Remove Extra Spaces</button>
+  <button className="btn btn-primary mx-1 my-2" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleUpClick}>Convert to Uppercase</button>
+  <button className="btn btn-primary mx-1 my-2" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleLowClick}>Convert to lowercase</button>
+  <button className="btn btn-primary mx-1 my-2" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleClearClick}>Clear Text</button>
+  <button className="btn btn-primary mx-1 my-2" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleCopyClick}>Copy Text</button>
+  <button className="btn btn-primary mx-1 my-2" style={{backgroundColor: props.mode==="light"? "blue" : "skyblue"}} onClick={handleExtraSpaces}>Remove Extra Spaces</button>
 </div>
 <div className="container my-3" style={{color:props.mode==="light" ? "black" : "white"}}>
     <h2>Your text summary</h2>
     <p>{text.split(" ").length-1} words and {text.length} characters</p>
     <p>{0.008 * text.trim().split(/\s+/).filter(Boolean).length} Minutes read</p>
     <h3>Preview</h3>
-    <p>{text.length>0 ? text : "Enter something to preview it here"}</p>
+    <p>{text.length>0 ? text : "Enter something in the text box to preview it here"}</p>
   </div>
 </>
   )
