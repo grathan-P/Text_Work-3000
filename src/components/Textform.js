@@ -13,6 +13,10 @@ export default function Textform(props) {
         props.showAlert("Converted to Uppercase!", "success");
     }
        const handleLowClick = ()=>{
+        if(text === text.toLowerCase()){
+        props.showAlert("Text is already in Lowercase!", "warning");
+        return;
+      }
         console.log("LowerCase was clicked"+text);
         let newText = text.toLowerCase();
         setText(newText);
@@ -20,12 +24,20 @@ export default function Textform(props) {
     }
 
     const handleClearClick =() =>{
+      if(text === ""){
+        props.showAlert("Text is already empty!", "warning");
+        return;
+      }
       let newText="";
       setText(newText);
       props.showAlert("Text Cleared!", "success");
     }
 
     const handleCopyClick =() =>{
+      if(text === ""){
+        props.showAlert("Nothing to copy, text is empty!", "warning");
+        return;
+      }
       let text = document.getElementById("myBox");
       text.select();
       navigator.clipboard.writeText(text.value);
@@ -33,6 +45,10 @@ export default function Textform(props) {
     }
 
     const handleExtraSpaces =() =>{
+      if(text === ""){
+        props.showAlert("Text is already empty!", "warning");
+        return;
+      }
       let newText = text.split(/[ ]+/);
       setText(newText.join(" "));
       props.showAlert("Extra spaces removed!", "success");
