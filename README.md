@@ -11,9 +11,13 @@ Quick, browser-based text transformations with live stats, theming, and routing.
 > Hash-based routing for static hosts: Home (#/), About (#/about)
 
 ##Tech Stack
+
 ###React 18 (CRA / react-scripts 5)
+
 ###React Router DOM 7 (HashRouter)
+
 ###Bootstrap 5 (CDN)
+
 ###Testing: Testing Library + jest-dom
 
 #Getting Started
