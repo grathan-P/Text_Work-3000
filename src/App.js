@@ -58,8 +58,8 @@ function App() {
 <Alert alert={alert}/>
 <div className="container my-3">
     <Routes>
-          <Route path="/about" element={<About mode={mode} toggleMode={toggleMode} />} />
-          <Route path="/" element={<Textform showAlert={showAlert} heading="Enter the text to analyze" mode={mode} toggleMode={toggleMode}/>} />
+          <Route path="/about" element={<About mode={mode} toggleMode={toggleMode}  />} />
+          <Route path="/" element={<Textform showAlert={showAlert} heading="Enter the text to analyze" mode={mode} toggleMode={toggleMode} />} />
           {/* <Textform showAlert={showAlert} heading="Enter the text to analyze" mode={mode} toggleMode={toggleMode}/> */}
     </Routes>
 </div>
