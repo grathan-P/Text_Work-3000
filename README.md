@@ -1,9 +1,30 @@
-# Getting Started with Create React App
+#About Text_Work-3000
+Text_Work-3000 is a single-page text utility built with React 18 (CRA) that lets you quickly transform and inspect text (uppercase/lowercase, clear, copy, trim extra spaces) with live stats and previews.
 
+##Core Features of Text_Work-3000
+> Transformations: uppercase, lowercase, clear, copy-to-clipboard, remove extra spaces.
+> Live analytics: word/character counts and estimated reading time; inline preview of the current text state.
+> Theming: light/dark mode toggle with preference persisted to localStorage and page background updates
+> Routing: HashRouter with Home (text tools) and About pages; navbar links with active states.
+> Alerts: transient status messages for actions and theme switches.
+
+##Tech Stack
+> React 18 single-page app bootstrapped with CRA (react-scripts 5).
+> Client-side routing with react-router-dom v7 using hash-based routes.
+> UI built around a text toolkit (transformations + analytics) with light/dark theming.
+> Test setup includes React Testing Library packages and jest-dom matchers.
+> Build outputs are static assets from npm run build, ready for any static host.
+
+##Primary Component
+> App shell, routing, theme + alert state in App.js.
+> Navbar with theme switch and navigation in Navbar.js.
+> Text toolkit UI/logic in Textform.js.
+> About page content in About.js
+
+# Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
