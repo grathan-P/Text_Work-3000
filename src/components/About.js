@@ -81,7 +81,7 @@ export default function About(props) {
           </h2>
           <div id="about-routing" className="accordion-collapse collapse">
             <div className="accordion-body" style={{ color: textColor, backgroundColor: bgColor }}>
-              <p><strong>Hash-based Routing:</strong> The app uses hash routing (#/home, #/about), which means it works on any static file server without special configuration.</p>
+              <p><strong>Hash-based Routing:</strong> The app uses hash routing (#/ for home, #/about), which means it works on any static file server without special configuration.</p>
               <p><strong>Deployment Ready:</strong> Built with Create React App and optimized for static hosting. Run <code>npm run build</code> and deploy the contents of the <code>build/</code> folder to Netlify, GitHub Pages, Vercel, or any static host.</p>
               <p><strong>Offline Ready:</strong> Once loaded, the app works fully offline. No server required to edit and transform your text.</p>
             </div>
